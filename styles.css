@@ -10,13 +10,20 @@ body {
   background: #08001f;
   color: var(--white);
   font-family: "Roboto", sans-serif;
+  min-height: 100vh;
+  position: relative;
 }
+
+.content-wrap {
+  padding-bottom: 8rem;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #000b6d60;
-  box-shadow: 0px 14px 30px 9px #00000025;
+  border-bottom: 5px solid #000000;
   flex-wrap: wrap;
 }
 a {
@@ -55,6 +62,74 @@ nav > a:hover,
   display: none;
 }
 
+.banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url(Images/bannerimage.jpg);
+}
+
+.banner > h1 {
+  margin: 0;
+  padding-left: 1em;
+  font-size: 6vh;
+  text-shadow: 0 0 50px #08001f;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(#ffffff15, #08001f);
+}
+
+.overlay,
+.banner {
+  height: 22vh;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+article > p {
+  margin: 0;
+  padding: 2rem;
+  width: 60vw;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #00085460;
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > p,
+footer > a {
+  margin: 0;
+  padding: 0 5rem;
+}
+
+#openinghours {
+  text-align: center;
+}
+
+#me {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .mobileHidden {
     display: none;
@@ -80,5 +155,44 @@ nav > a:hover,
   #mobileMenu {
     text-align: center;
     width: 100%;
+  }
+
+  .banner,
+  .overlay {
+    height: 15vh;
+    justify-content: center;
+  }
+
+  .banner > h1 {
+    font-size: 4vh;
+    padding-left: 0;
+  }
+
+  article {
+    flex-direction: column;
+  }
+
+  article > p {
+    text-align: center;
+    padding: 2rem 0;
+    width: 75vw;
+  }
+
+  article > img {
+    width: 75vw;
+  }
+
+  .content-wrap {
+    padding-bottom: 16rem;
+  }
+
+  footer {
+    flex-direction: column;
+    height: 14rem;
+    font-size: 80%;
+  }
+  footer > a,
+  footer > p {
+    padding: 1rem 0;
   }
 }
