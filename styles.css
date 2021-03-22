@@ -102,7 +102,7 @@ article {
 article > p {
   margin: 0;
   padding: 2rem;
-  width: 60vw;
+  width: 50vw;
 }
 
 footer {
@@ -111,9 +111,11 @@ footer {
   background-color: #00085460;
   height: 8rem;
   width: 100%;
+  border-top: 5px solid #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 75%;
 }
 
 footer > p,
@@ -122,12 +124,45 @@ footer > a {
   padding: 0 5rem;
 }
 
+.reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75vw;
+  margin: 2rem auto;
+  border: 2px solid #2c2c2c;
+  border-radius: 1rem;
+}
+
+.reviews > p {
+  font-style: italic;
+  max-width: 50rem;
+}
+
 #openinghours {
   text-align: center;
 }
 
 #me {
   text-align: center;
+}
+
+.map {
+  width: 25rem;
+  height: 25rem;
+}
+
+#contactdetails {
+  width: fit-content;
+}
+.Services {
+  max-width: 40rem;
+}
+.ServicePic {
+  height: 15rem;
+  width: 15rem;
+  margin: 3rem;
+  border: 5px solid #000000;
 }
 
 @media (max-width: 768px) {
@@ -194,5 +229,18 @@ footer > a {
   footer > a,
   footer > p {
     padding: 1rem 0;
+  }
+
+  .reviews {
+    flex-direction: column;
+  }
+
+  .map {
+    height: 15rem;
+    width: 15rem;
+  }
+
+  #MOTSign {
+    height: fit-content;
   }
 }
