@@ -99,7 +99,7 @@ article {
   padding: 2rem;
 }
 
-article > p {
+.maintext {
   margin: 0;
   padding: 2rem;
   width: 50vw;
@@ -137,14 +137,21 @@ footer > a {
 .reviews > p {
   font-style: italic;
   max-width: 50rem;
+  padding: 1rem;
 }
 
 #openinghours {
   text-align: center;
+  padding: 10px 80px;
 }
 
 #me {
   text-align: center;
+  padding: 10px 80px;
+}
+#me > p,
+#openinghours > p {
+  margin: 0;
 }
 
 .map {
@@ -154,9 +161,19 @@ footer > a {
 
 #contactdetails {
   width: fit-content;
+  margin: 1rem;
 }
+
+#contactdetails > p {
+  margin: 0;
+}
+
+#contactdetails > p:nth-of-type(5) {
+  margin: 0 0 1rem;
+}
+
 .Services {
-  max-width: 40rem;
+  width: 40rem;
 }
 .ServicePic {
   height: 15rem;
@@ -175,7 +192,6 @@ footer > a {
   }
   nav {
     width: 100%;
-    flex-direction: column;
     padding-right: 0;
     flex-wrap: wrap;
   }
@@ -203,14 +219,23 @@ footer > a {
     padding-left: 0;
   }
 
-  article {
+  article,
+  .reviews,
+  footer,
+  nav {
     flex-direction: column;
   }
 
-  article > p {
-    text-align: center;
+  .maintext,
+  #contactdetails {
     padding: 2rem 0;
     width: 75vw;
+  }
+
+  .maintext,
+  #contactdetails,
+  .Services {
+    text-align: center;
   }
 
   article > img {
@@ -222,7 +247,6 @@ footer > a {
   }
 
   footer {
-    flex-direction: column;
     height: 14rem;
     font-size: 80%;
   }
@@ -231,13 +255,13 @@ footer > a {
     padding: 1rem 0;
   }
 
-  .reviews {
-    flex-direction: column;
-  }
-
   .map {
     height: 15rem;
     width: 15rem;
+  }
+
+  .Services {
+    width: auto;
   }
 
   #MOTSign {
